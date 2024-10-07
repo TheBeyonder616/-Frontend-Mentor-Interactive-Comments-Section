@@ -135,7 +135,7 @@ class Script {
 
     const commentElement = select.el(newComment, `[data-insert-comment]`);
     const check = [newComment, comment];
-    console.log(newComment);
+    
     if (check.some((item) => !item)) return;
     const userId = cList.attribute(newComment, "data-user-id");
     if (!userState.has(userId)) userState.set(userId, { comments: "" });

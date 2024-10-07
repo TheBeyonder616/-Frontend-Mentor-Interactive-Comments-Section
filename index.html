@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive comments section where users can engage with content."
+    />
+    <meta
+      name="keywords"
+      content="comments, interactive, user engagement, frontend mentor"
+    />
+    <meta name="author" content="Peter Godspower" />
+    <meta name="theme-color" content="hsl(211, 10%, 45%)" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./Js/control.js" type="module"></script>
+    <title>Frontend Mentor | Interactive comments section</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav>
+        <!-- ?[PopUp] -->
+        <a
+          href="#header"
+          class="svg popup"
+          data-popup
+          aria-label="Scroll to top"
+        >
+          <svg aria-label="Icon arrow up">
+            <use href="./images/icon.svg#icon-arrow"></use>
+          </svg>
+        </a>
+      </nav>
+    </header>
+
+    <main id="main" class="main">
+      <article class="interactive-comments" data-display="Interactive-comments">
+        <section class="comments" data-display="comments">
+          <!-- ?[Modula] -->
+          <div
+            class="comment-modal hide"
+            data-display="modula"
+            role="dialog"
+            aria-labelledby="modula-title"
+            aria-describedby="modula-description"
+          >
+            <div class="comment-modal__item">
+              <h2
+                id="modula-title"
+                class="heading-secondary modular--secondary"
+              >
+                Delete comment
+              </h2>
+              <p id="modula-description" class="heading-p modular--p">
+                Are you sure you want to delete this comment? This will remove
+                the comment and can't be undone
+              </p>
+
+              <div class="comment-modal__buttons">
+                <button class="btn cancel--btn" data-action="cancel">
+                  No,cancel
+                </button>
+                <button class="btn delete--btn" data-action="confirm-delete">
+                  Yes,delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Peter Godspower</a>.
+    </footer>
+  </body>
+</html>
